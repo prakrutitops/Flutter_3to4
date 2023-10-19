@@ -1,0 +1,26 @@
+Conditional Statement:
+If
+Else
+Else if
+Nested if
+Switch ,case
+
+>=70 -> A Grade
+>=60 -> B Grade
+>=50 -> C Grade
+>=40 -> D Grade
+Fail
+
+Looping statement:
+
+for(initialization;condition;increment/decremen)
+{
+	answer	
+}
+
+for
+for in
+for each
+while
+do while
+
