@@ -1,0 +1,45 @@
+The dollar sign "$":
+Rune Value: 0x0024
+
+The percent sign "%":
+Rune Value: 0x0025
+
+The copyright symbol "©":
+Rune Value: 0x00A9
+
+The registered trademark symbol "®":
+Rune Value: 0x00AE
+
+The degree symbol "°":
+Rune Value: 0x00B0
+
+The infinity symbol "∞":
+Rune Value: 0x221E
+
+The check mark "✔":
+Rune Value: 0x2713
+
+The cross mark "✘":
+Rune Value: 0x2718
+
+The heart symbol "❤":
+Rune Value: 0x2764
+
+The star symbol "★":
+Rune Value: 0x2605
+
+
+void main() {
+  List<int> runeValues = [0x0024, 0x0025, 0x00A9, 0x00AE, 0x00B0];
+  String symbols = String.fromCharCodes(runeValues);
+  print(symbols);
+}
+
+void main() {
+  // Using runes to print symbols
+  print(String.fromCharCodes([0x1F60D])); // This prints a smiley face emoji 😍
+  print(String.fromCharCodes([0x2764])); // This prints a heart symbol ❤
+}s
+
+
+
