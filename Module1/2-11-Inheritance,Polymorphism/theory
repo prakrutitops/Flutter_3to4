@@ -1,0 +1,29 @@
+interface: collection of abstract methods
+
+abstract method: Method which does not have body part
+
+annotations:
+@override
+
+
+Polymorphism:
+
+Overloading: When two or more methods having a same name but number of parameters are diffrent or data type will change
+
+
+
+Overriding:When two or more methods having a same name and number of parameters are also same
+
+
+
+
+class A
+{
+	A(a,b)
+	{
+	}
+	
+	A.a(a)
+	{
+	}
+}
