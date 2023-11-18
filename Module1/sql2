@@ -1,0 +1,102 @@
+Skip to content
+prakrutitops
+/
+Batch_12-00-to-1-00-Android
+
+Type / to search
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+BreadcrumbsBatch_12-00-to-1-00-Android/Module1/12-6-SQL
+/SQL
+Latest commit
+ 
+History
+File metadata and controls
+
+Code
+
+Blame
+87 lines (59 loc) · 2.1 KB
+DDL:Data Definition language
+
+1)Create Database:
+CREATE DATABASE acer
+
+2)Create Table:
+CREATE TABLE product_info(p_id int PRIMARY KEY AUTO_INCREMENT,p_name varchar(20),p_price int)
+
+3)Add Column:
+ALTER TABLE product_info ADD p_des varchar(50)
+
+4)Add Colum After Column:
+ALTER TABLE product_info ADD p_type varchar(50) AFTER p_price
+
+5)Data Type Change:
+ALTER TABLE product_info MODIFY p_price varchar(20)
+
+6)rename Column name :
+ALTER TABLE product_info CHANGE p_price p_amount int
+
+7)Drop Column:
+ALTER TABLE product_info DROP p_type
+
+8)Rename Table Name:
+RENAME TABLE product_info to product_information 
+
+9)Drop Table:
+DROP TABLE product_information
+
+10)Truncate Table:
+Truncate TABLE product_information
+
+DML:Data Manipulation Language
+
+11)Insert Data:
+INSERT INTO products (product_name,product_price,product_description) VALUES ('Samsung' ,'20000', 'good phone')'
+
+12)Multiple Value Insert:
+INSERT INTO products (product_name) VALUES ('Vivo'),('Oppo'),('Mi')
+
+13)Update:
+UPDATE products set product_price='20000' WHERE id =2;
+UPDATE products set product_price='30000' WHERE product_name ='oppo';
+
+14)Delete:
+DELETE FROM products WHERE id =5;
+
+DQL:Data Query Language
+
+15)Select All Data:
+Select * from products
+
+16)Select Row Wise Data:
+SELECT * FROM products WHERE id='3'
+
+17)Select Column wise data:
+SELECT prodict_name FROM products 
+
+18)Order By:
+SELECT * FROM products ORDER by product_price DESC
+
+
+ 
+
+DCL:Data Control Language
+Rollback,Commit
+
+JOIN:
+1)JOIN->INNER JOIN -> SELECT * from location JOIN products on location.id = products.id
+2)LEFT JOIN ->SELECT * from location LEFT JOIN products on location.id = products.id
+3)RIGHT JOIN->SELECT * from location RIGHT JOIN products on location.id = products.id
+4)FULL JOIN->
+SELECT * from location LEFT JOIN products on location.id = products.id
+UNION
+SELECT * from location RIGHT JOIN products on location.id = products.id
