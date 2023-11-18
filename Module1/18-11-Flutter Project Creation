@@ -1,0 +1,21 @@
+1. Android Studio - Install - Internet Connected
+
+2. File ->Settings -> Plugins -> download 2 Plugin 
+   1) Dart
+   2) Flutter
+
+3. Restart Android Studio
+
+4. File -> Create New Flutter Project
+  
+   project name
+   android version
+   ios version
+   create
+
+[Settings->Developer Options->USB Debugging]
+5. Connect Your Phone and Run it
+
+
+
+	
