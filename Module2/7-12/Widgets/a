@@ -1,1 +1,12 @@
 
+Switch
+ON->Music Play
+OFF->Music Stop
+
+//1
+Back Button Press->AlertDialog
+
+
+//2
+Toast msg -> double tap to exit
+exit
