@@ -1,1 +1,26 @@
 
+Form:
+
+Firstname
+Lastname
+Email
+Gender->radio
+Hobbies->checkbox
+city->dropdown
+Password
+Confirm Password
+
+submit -> 
+
+click ->Validations
+1)Not Empty
+2)Email Proper Format
+3)Pass and cpass same
+4)Pass->uppercase,lowercase,digit,special character min - 6 char
+
+
+Next Page
+
+Detail Print
+
+
