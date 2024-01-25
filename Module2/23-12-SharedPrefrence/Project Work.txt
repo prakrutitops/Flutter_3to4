@@ -1,0 +1,22 @@
+Project:
+
+1)Splash Screen
+
+2)Introduction Screen
+
+3)Signup Page
+firstname-textfield
+lastname-textfield
+email-textfield
+Gender-radiobutton
+Mobile Number-textfield
+Hobbies-checkbox
+City-dropdown
+password-hide
+confirm password-hide
+
+4)Login Page
+mobile number-textfield
+password-hide
+
+5)HomePage ->Logout[SharedPrefrence]
