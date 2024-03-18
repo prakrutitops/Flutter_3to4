@@ -1,0 +1,159 @@
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+import 'login.dart';
+
+void main()
+{
+  runApp(MaterialApp(home:MyApp()));
+}
+class MyApp extends StatefulWidget
+{
+  @override
+  State<MyApp> createState() => _SignupState();
+}
+
+class _SignupState extends State<MyApp>
+{
+  TextEditingController fname = TextEditingController();
+  TextEditingController lname = TextEditingController();
+  TextEditingController pass = TextEditingController();
+  TextEditingController cpass = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController gender = TextEditingController();
+  TextEditingController address = TextEditingController();
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold
+      (
+      appBar: AppBar(title:Text("Signup Form"),),
+      body: Center
+        (
+        child: Container
+          (
+          child: Column
+            (
+            children:
+            [
+
+              TextField
+                (
+                controller: fname,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter First Name",
+                    hintText: "First Name"
+                ),
+              ),
+
+              TextField
+                (
+                controller: lname,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter Last Name",
+                    hintText: "Last Name"
+                ),
+              ),
+
+              TextField
+                (
+                controller: pass,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter Password",
+                    hintText: "password"
+                ),
+              ),
+
+              TextField
+                (
+                controller: cpass,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter confirm Password",
+                    hintText: "Confirm Password"
+                ),
+              ),
+
+              TextField
+                (
+                controller: email,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter Email",
+                    hintText: "Email"
+                ),
+              ),
+
+              TextField
+                (
+                controller: phone,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter Phone",
+                    hintText: "Phone"
+                ),
+              ),
+
+              TextField
+                (
+                controller: gender,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter Gender",
+                    hintText: "Gender"
+                ),
+              ),
+
+              TextField
+                (
+                controller: address,
+                decoration: InputDecoration
+                  (
+                    labelText: "Enter Address",
+                    hintText: "Address"
+                ),
+              ),
+
+              ElevatedButton(onPressed: ()
+              {
+
+                var url = Uri.parse("https://aesha2002.000webhostapp.com/Digital_Society/Login_Register/register_insert.php");
+
+                http.post(url,
+                    body:
+                    {
+
+                      "firstname":fname.text.toString(),
+                      "lastname":lname.text.toString(),
+                      "password":pass.text.toString(),
+                      "confirm_password":cpass.text.toString(),
+                      "email":email.text.toString(),
+                      "phone":phone.text.toString(),
+                      "gender":gender.text.toString(),
+                      "address":address.text.toString(),
+
+
+
+
+                    });
+                print('Inserted');
+
+
+
+
+                Navigator.push(context,MaterialPageRoute(builder: (context) => LoginPage()));
+              }, child: Text("Sign up"))
+
+            ],
+          ),
+        ),
+      ),
+
+    );
+  }
+}
